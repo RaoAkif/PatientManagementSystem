@@ -1,48 +1,4 @@
 {
-	"*": {
-		"style": {
-			"--tw-border-spacing-x": 0,
-			"--tw-border-spacing-y": 0,
-			"--tw-ordinal": "",
-			"--tw-slashed-zero": "",
-			"--tw-numeric-figure": "",
-			"--tw-numeric-spacing": "",
-			"--tw-numeric-fraction": ""
-		}
-	},
-	"::before": {
-		"style": {
-			"--tw-border-spacing-x": 0,
-			"--tw-border-spacing-y": 0,
-			"--tw-ordinal": "",
-			"--tw-slashed-zero": "",
-			"--tw-numeric-figure": "",
-			"--tw-numeric-spacing": "",
-			"--tw-numeric-fraction": ""
-		}
-	},
-	"::after": {
-		"style": {
-			"--tw-border-spacing-x": 0,
-			"--tw-border-spacing-y": 0,
-			"--tw-ordinal": "",
-			"--tw-slashed-zero": "",
-			"--tw-numeric-figure": "",
-			"--tw-numeric-spacing": "",
-			"--tw-numeric-fraction": ""
-		}
-	},
-	"::backdrop": {
-		"style": {
-			"--tw-border-spacing-x": 0,
-			"--tw-border-spacing-y": 0,
-			"--tw-ordinal": "",
-			"--tw-slashed-zero": "",
-			"--tw-numeric-figure": "",
-			"--tw-numeric-spacing": "",
-			"--tw-numeric-fraction": ""
-		}
-	},
 	"my-5": {
 		"style": {
 			"marginTop": 20,
@@ -126,6 +82,11 @@
 	"text-center": {
 		"style": {
 			"textAlign": "center"
+		}
+	},
+	"font-Inter": {
+		"style": {
+			"fontFamily": "InterRegular"
 		}
 	},
 	"text-3xl": {

@@ -5,7 +5,13 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
    ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily:{
+        'Inter': 'InterRegular', 
+        'InterBold': 'InterBold', 
+        'InterLight': 'InterLight', 
+      }
+    },
   },
   plugins: [],
   corePlugins: require('tailwind-rn/unsupported-core-plugins'),
