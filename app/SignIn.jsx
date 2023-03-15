@@ -14,16 +14,16 @@ export default function SignIn() {
         <Text style={tw('text-4xl text-gray-800 font-bold mt-7 text-left ml-5')}>Welcome<br/>back!</Text>
       </View>
       <View style={tw('flex items-center')}>
-      <View style={tw('w-4/5 rounded-2xl bg-gray-100 my-3')}>
-        <TextInput label="CNIC No" style={tw('w-auto px-5 py-5 rounded-2xl')} placeholder="3xxx-xxxxxxx-x" />
-      </View>
-      <View style={tw('w-4/5 rounded-2xl bg-gray-100 my-3 mb-5')}>
-        <TextInput style={tw('w-auto px-5 py-5 rounded-2xl')} placeholder="emily@mail.com" />
-      </View>
-      <PrimaryButton buttonText="Sign In" />
-      <View style={tw('mt-5')}>
-        <Text style={tw('text-black font-bold')}>Forgot Password?</Text>
-      </View>
+        <View style={tw('w-4/5 rounded-2xl bg-gray-100 my-3')}>
+          <TextInput label="CNIC No" style={tw('w-auto px-5 py-5 rounded-2xl')} placeholder="3xxx-xxxxxxx-x" />
+        </View>
+        <View style={tw('w-4/5 rounded-2xl bg-gray-100 my-3 mb-5')}>
+          <TextInput style={tw('w-auto px-5 py-5 rounded-2xl')} placeholder="emily@mail.com" />
+        </View>
+        <PrimaryButton buttonText="Sign In" />
+        <View style={tw('mt-5')}>
+          <Text style={tw('text-black font-bold')}>Forgot Password?</Text>
+        </View>
       </View>
     </View>
   );
