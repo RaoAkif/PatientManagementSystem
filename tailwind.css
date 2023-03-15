@@ -1,3 +1,9 @@
+@font-face {
+  font-family: InterBlack;
+
+  src: url(./assets/fonts/Inter/Inter-Black.ttf);
+}
+
 *, ::before, ::after {
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
@@ -5,7 +11,7 @@
   --tw-slashed-zero:  ;
   --tw-numeric-figure:  ;
   --tw-numeric-spacing:  ;
-  --tw-numeric-fraction:  
+  --tw-numeric-fraction:  ;
 }
 
 ::backdrop {
@@ -15,7 +21,7 @@
   --tw-slashed-zero:  ;
   --tw-numeric-figure:  ;
   --tw-numeric-spacing:  ;
-  --tw-numeric-fraction:  
+  --tw-numeric-fraction:  ;
 }
 
 .m-5 {
@@ -36,7 +42,7 @@
 }
 
 .flex {
-  display: flex
+  display: flex;
 }
 
 .w-3\/5 {
@@ -48,13 +54,14 @@
 }
 
 .flex-1 {
-  flex: 1 1 0%
+  flex: 1 1 0%;
 }
 
 .items-center {
-  align-items: center
+  align-items: center;
 }
 
+<<<<<<< Updated upstream
 .rounded-2xl {
   border-radius: 1rem
 }
@@ -113,11 +120,20 @@
 
 .text-center {
   text-align: center
+=======
+.justify-center {
+  justify-content: center;
+>>>>>>> Stashed changes
 }
 
 .text-3xl {
   font-size: 1.875rem;
-  line-height: 2.25rem
+  line-height: 2.25rem;
+}
+
+.text-gray-600 {
+  --tw-text-opacity: 1;
+  color: rgb(75 85 99 / var(--tw-text-opacity));
 }
 
 .text-xl {
@@ -150,6 +166,7 @@
 
 .text-white {
   --tw-text-opacity: 1;
+<<<<<<< Updated upstream
   color: rgb(255 255 255 / var(--tw-text-opacity))
 }
 
@@ -157,3 +174,18 @@
   --tw-text-opacity: 1;
   color: rgb(99 102 241 / var(--tw-text-opacity))
 }
+=======
+  color: rgb(220 38 38 / var(--tw-text-opacity));
+}
+
+.text-gray-500 {
+  --tw-text-opacity: 1;
+  color: rgb(107 114 128 / var(--tw-text-opacity));
+}
+
+.text-red-500 {
+  --tw-text-opacity: 1;
+  color: rgb(239 68 68 / var(--tw-text-opacity));
+}
+
+>>>>>>> Stashed changes

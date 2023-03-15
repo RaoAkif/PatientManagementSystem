@@ -1,3 +1,9 @@
+@font-face {
+    font-family: InterBlack;
+    src: url(./assets/fonts/Inter/Inter-Black.ttf);
+  }
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
