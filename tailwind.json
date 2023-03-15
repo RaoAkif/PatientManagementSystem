@@ -65,22 +65,22 @@
 			"justifyContent": "center"
 		}
 	},
-	"text-blue-500": {
+	"text-3xl": {
 		"style": {
-			"--tw-text-opacity": 1,
-			"color": "rgb(59 130 246 / var(--tw-text-opacity))"
-		}
-	},
-	"text-red-500": {
-		"style": {
-			"--tw-text-opacity": 1,
-			"color": "rgb(239 68 68 / var(--tw-text-opacity))"
+			"fontSize": 30,
+			"lineHeight": 36
 		}
 	},
 	"text-red-600": {
 		"style": {
 			"--tw-text-opacity": 1,
 			"color": "rgb(220 38 38 / var(--tw-text-opacity))"
+		}
+	},
+	"text-red-700": {
+		"style": {
+			"--tw-text-opacity": 1,
+			"color": "rgb(185 28 28 / var(--tw-text-opacity))"
 		}
 	}
 }

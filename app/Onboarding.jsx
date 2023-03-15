@@ -5,7 +5,10 @@ export default function Onboarding() {
   const tw = useTailwind()
     return (
     <View style={tw('flex flex-1 items-center justify-center')}>
-      <Text style={tw('text-red-600')}>Onboarding</Text>
+      <Text style={tw('text-3xl')} >Onboarding</Text>
+      
     </View>
   )
 }
+
+
