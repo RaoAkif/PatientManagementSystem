@@ -16,7 +16,7 @@ export default function MyMessages() {
         </View>
         <View style={tw('mt-10')}>
           <View style={tw('flex flex-row')}>
-            <View style={tw("w-3/6 py-3 my-2 rounded-3xl bg-white border-2 border-gray-100 -mr-5 z-10")} accessibilityLabel='Learn more'>
+            <View style={tw("w-3/6 py-3 my-2 rounded-3xl bg-white border-2 border-gray-100 ml-5 -mr-5 z-10")} accessibilityLabel='Learn more'>
               <Text style={tw("text-gray-800 font-bold text-center font-Inter text-base")}>
                 Unread(4)
               </Text>
@@ -32,7 +32,7 @@ export default function MyMessages() {
             <View style={tw('flex flex-col ml-4')}>
               <View style={tw('flex flex-row justify-between w-7/12')}>
                 <Text style={tw("text-gray-800 font-bold text-center font-Inter")}>Medix Support</Text>
-                <Text style={tw("text-violet-800 text-bold font-Inter px-2 py-1 bg-gray-100 rounded-lg")}>20 Jan</Text>
+                <Text style={tw("text-violet-800 font-InterBold px-2 py-1 bg-gray-100 rounded-lg")}>20 Jan</Text>
               </View>
               <Text style={tw("text-gray-800 font-Inter text-xs text-justify w-7/12 mt-4")}>
                 Lorem Ipsum is simply dummy text of the printing and typesetting industry.
@@ -44,7 +44,7 @@ export default function MyMessages() {
             <View style={tw('flex flex-col ml-4')}>
               <View style={tw('flex flex-row justify-between w-7/12')}>
                 <Text style={tw("text-gray-800 font-bold text-center font-Inter")}>Medix Support</Text>
-                <Text style={tw("text-violet-800 text-bold font-Inter px-2 py-1 bg-gray-100 rounded-lg")}>20 Jan</Text>
+                <Text style={tw("text-violet-800 font-InterBold px-2 py-1 bg-gray-100 rounded-lg")}>20 Jan</Text>
               </View>
               <Text style={tw("text-gray-800 font-Inter text-xs text-justify w-7/12 mt-4")}>
                 Lorem Ipsum is simply dummy text of the printing and typesetting industry.
@@ -56,7 +56,7 @@ export default function MyMessages() {
             <View style={tw('flex flex-col ml-4')}>
               <View style={tw('flex flex-row justify-between w-7/12')}>
                 <Text style={tw("text-gray-800 font-bold text-center font-Inter")}>Medix Support</Text>
-                <Text style={tw("text-violet-800 text-bold font-Inter px-2 py-1 bg-gray-100 rounded-lg")}>20 Jan</Text>
+                <Text style={tw("text-violet-800 font-InterBold px-2 py-1 bg-gray-100 rounded-lg")}>20 Jan</Text>
               </View>
               <Text style={tw("text-gray-800 font-Inter text-xs text-justify w-7/12 mt-4")}>
                 Lorem Ipsum is simply dummy text of the printing and typesetting industry.
@@ -68,7 +68,7 @@ export default function MyMessages() {
             <View style={tw('flex flex-col ml-4')}>
               <View style={tw('flex flex-row justify-between w-7/12')}>
                 <Text style={tw("text-gray-800 font-bold text-center font-Inter")}>Medix Support</Text>
-                <Text style={tw("text-violet-800 text-bold font-Inter px-2 py-1 bg-gray-100 rounded-lg")}>20 Jan</Text>
+                <Text style={tw("text-violet-800 font-InterBold px-2 py-1 bg-gray-100 rounded-lg")}>20 Jan</Text>
               </View>
               <Text style={tw("text-gray-800 font-Inter text-xs text-justify w-7/12 mt-4")}>
                 Lorem Ipsum is simply dummy text of the printing and typesetting industry.
