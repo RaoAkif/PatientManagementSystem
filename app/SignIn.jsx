@@ -7,7 +7,7 @@ import PrimaryInput from "../components/PrimaryInput";
 
 export default function SignIn() {
   const tw = useTailwind();
-  const router = useRouter;
+  const router = useRouter();
   return (
     <SafeAreaView style={tw("flex-1")}>
       <ScrollView
@@ -15,7 +15,7 @@ export default function SignIn() {
         showsVerticalScrollIndicator={false}
       >
         <View style={tw("flex flex-row items-center justify-center mb-2")}>
-          <FontAwesome5 onPress={router().back} name="chevron-left" size={24} color="black" />
+          <FontAwesome5 onPress={router.back} name="chevron-left" size={24} color="black" />
           <Text style={tw("text-customBlack flex-1 text-base font-InterBold text-center")}>Sign In</Text>
         </View>
 

@@ -7,13 +7,13 @@ import PrimaryInput from "../components/PrimaryInput";
 
 export default function SignUp() {
   const tw = useTailwind();
-  const router = useRouter;
+  const router = useRouter();
 
   return (
     <SafeAreaView style={tw("flex-1")}>
       <View style={tw(`flex-1 mx-6 ${Platform.OS === "ios" ? "" : "mt-12"}`)}>
         <View style={tw("flex flex-row items-center justify-center mb-2")}>
-          <FontAwesome5 onPress={router().back} name="chevron-left" size={24} color="black" />
+          <FontAwesome5 onPress={router.back} name="chevron-left" size={24} color="black" />
           <Text style={tw("text-customBlack flex-1 text-base font-InterBold text-center")}>Sign Up</Text>
         </View>
         <ScrollView showsVerticalScrollIndicator={false}>
