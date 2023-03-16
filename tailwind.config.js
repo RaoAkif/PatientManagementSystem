@@ -10,7 +10,11 @@ module.exports = {
         'Inter': 'InterRegular', 
         'InterBold': 'InterBold', 
         'InterLight': 'InterLight', 
-      }
+      },
+      colors:{
+        customBlack : '#0D3F67',
+        customPurple : '#6B48FF'
+      },
     },
   },
   plugins: [],
