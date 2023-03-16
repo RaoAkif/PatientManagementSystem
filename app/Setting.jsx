@@ -11,7 +11,7 @@ export default function Dashboard() {
         <View>
           <View style={tw('mb-20')}>
             <View style={tw('flex flex-row items-center')}>
-              <View style={tw('bg-violet-100 p-2 rounded-2xl')}>
+              <View style={tw('border-2 border-gray-100 drop-shadow-sm p-2 rounded-2xl')}>
                 <Image style={tw('w-7 h-7')} source={require('../assets/images/chevron_left.png')} />
               </View>
               <Text style={tw('text-3xl font-bold text-gray-800 ml-5')}>Setting</Text>
