@@ -1,12 +1,13 @@
 import React from 'react'
-import { View, Text } from "react-native-web";
+import { Text, View } from 'react-native';
+
 import { useTailwind } from "tailwind-rn";
 
 const SecondaryButton = ({buttonText}) => {
   const tw = useTailwind();
   return (
-    <View style={tw("border-indigo-500 border-2 w-4/5 py-5 rounded-2xl")} accessibilityLabel='Learn more'>
-      <Text style={tw("text-indigo-500  text-center")}>
+    <View style={tw("border-customPurple border-2 w-full py-5 my-2 rounded-2xl")} accessibilityLabel='Learn more'>
+      <Text style={tw("text-customPurple text-center font-Inter text-base")}>
         {buttonText}
       </Text>
     </View>

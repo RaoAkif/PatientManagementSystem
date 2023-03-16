@@ -1,20 +1,23 @@
-import { View, Text } from "react-native";
+import { View, Text, SafeAreaView } from "react-native";
 import { useTailwind } from "tailwind-rn";
 import PrimaryButton from "../components/PrimaryButton";
 import SecondaryButton from "../components/SecondaryButton";
 
-
 export default function Onboarding() {
   const tw = useTailwind();
   return (
-    <View style={tw("flex flex-1 items-center ")}>
-      <View style={tw("w-3/5")}>
-        <Text style={tw("text-4xl pt-96 text-gray-800 font-extrabold text-center")}>Consult<br /> from Home</Text>
-        <Text style={tw("text-xl text-gray-800 text-center my-5")}>Make you doctor appointment as easy as post a status from your Facebook.</Text>
+    <SafeAreaView style={tw("flex-1")}>
+      <View style={tw("flex flex-1 items-center mb-6 mx-6 ")}>
+        <View style={tw("w-full flex-col flex-1 justify-center")}>
+          <Text style={tw("text-4xl text-customBlack font-extrabold text-center")}>Consult</Text>
+          <Text style={tw("text-4xl text-customBlack font-extrabold text-center")}>from Home</Text>
+          <Text style={tw("text-xl text-customBlack text-center my-5")}>
+            Make you doctor appointment as easy as post a status from your Facebook.
+          </Text>
+        </View>
+        <PrimaryButton buttonText="Get Started" />
+        <SecondaryButton buttonText="Sign In" />
       </View>
-      <PrimaryButton buttonText="Get Started" />
-      <br />
-      <SecondaryButton buttonText="Sign In" />
-    </View>
+    </SafeAreaView>
   );
 }
