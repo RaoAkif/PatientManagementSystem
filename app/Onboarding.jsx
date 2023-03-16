@@ -15,8 +15,8 @@ export default function Onboarding() {
             Make you doctor appointment as easy as post a status from your Facebook.
           </Text>
         </View>
-        <PrimaryButton buttonText="Get Started" />
-        <SecondaryButton buttonText="Sign In" />
+        <PrimaryButton buttonText="Get Started" href="/SignUp" />
+        <SecondaryButton buttonText="Sign In" href="/SignIn" />
       </View>
     </SafeAreaView>
   );

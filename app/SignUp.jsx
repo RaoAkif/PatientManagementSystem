@@ -1,30 +1,35 @@
-import { View, Text, TextInput } from "react-native";
-import { useTailwind } from 'tailwind-rn';
+import { useRouter } from "expo-router";
+import { View, Text, TextInput, SafeAreaView, ScrollView } from "react-native";
+import { useTailwind } from "tailwind-rn";
 import PrimaryButton from "../components/PrimaryButton";
+import { FontAwesome5 } from "@expo/vector-icons";
+import PrimaryInput from "../components/PrimaryInput";
 
 export default function SignUp() {
   const tw = useTailwind();
-  return (<Text>SignUP</Text>
-    // <View style={tw('h-4/5 flex-col justify-between')}>
-    //   <View>
-    //     <Text style={tw('text-black text-base font-bold mt-10 text-center')}>Sign Up</Text>
-    //   </View>
-    //   <View>
-    //     <Text style={tw('text-5xl text-indigo-500 font-bold text-left ml-5 pb-2')}>PHS</Text>
-    //     <Text style={tw('text-4xl text-gray-800 font-bold mt-7 text-left ml-5')}>Join our healthy community</Text>
-    //   </View>
-    //   <View style={tw('flex items-center')}>
-    //     <View style={tw('w-4/5 rounded-2xl bg-gray-100 my-3')}>
-    //       <TextInput label="CNIC No" style={tw('w-auto px-5 py-5 rounded-2xl')} placeholder="Emily Robertson" />
-    //     </View>
-    //     <View style={tw('w-4/5 rounded-2xl bg-gray-100 my-3')}>
-    //       <TextInput label="CNIC No" style={tw('w-auto px-5 py-5 rounded-2xl')} placeholder="3xxx-xxxxxxx-x" />
-    //     </View>
-    //     <View style={tw('w-4/5 rounded-2xl bg-gray-100 my-3 mb-8')}>
-    //       <TextInput style={tw('w-auto px-5 py-5 rounded-2xl')} placeholder="emily@mail.com" />
-    //     </View>
-    //     <PrimaryButton buttonText="Sign Up" />
-    //   </View>
-    // </View>
+  const router = useRouter;
+
+  return (
+    <SafeAreaView style={tw("flex-1")}>
+      <View style={tw("flex-1 mx-6 mt-12")}>
+        <View style={tw("flex flex-row items-center justify-center mb-2")}>
+          <FontAwesome5 onPress={router().back} name="chevron-left" size={24} color="black" />
+          <Text style={tw("text-customBlack flex-1 text-base font-InterBold text-center")}>Sign Up</Text>
+        </View>
+        <ScrollView showsVerticalScrollIndicator={false}>
+          <View style={tw("my-8 flex-1 flex-col")}>
+            <Text style={{ ...tw("text-customPurple font-InterBold"), fontSize: 48 }}>PHS</Text>
+            <Text style={tw("text-4xl text-customBlack font-InterBold ")}>Join our healthy community</Text>
+          </View>
+          <View style={tw("flex items-center")}>
+            <PrimaryInput label="Full Name" placeholder="Your Given Name" />
+            <PrimaryInput label="CNIC" placeholder="00000-0000000-0" />
+            <PrimaryInput label="Email" placeholder="eg. yourname@example.com" />
+            <PrimaryInput label="Password" placeholder="Type your password" secureTextEntry />
+            <PrimaryButton buttonText="Sign Up" href="/SignIn" />
+          </View>
+        </ScrollView>
+      </View>
+    </SafeAreaView>
   );
 }
