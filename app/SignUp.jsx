@@ -1,5 +1,5 @@
 import { useRouter } from "expo-router";
-import { View, Text, TextInput, SafeAreaView, ScrollView } from "react-native";
+import { View, Text, Platform, SafeAreaView, ScrollView } from "react-native";
 import { useTailwind } from "tailwind-rn";
 import PrimaryButton from "../components/PrimaryButton";
 import { FontAwesome5 } from "@expo/vector-icons";
@@ -11,7 +11,7 @@ export default function SignUp() {
 
   return (
     <SafeAreaView style={tw("flex-1")}>
-      <View style={tw("flex-1 mx-6 mt-12")}>
+      <View style={tw(`flex-1 mx-6 ${Platform.OS === "ios" ? "" : "mt-12"}`)}>
         <View style={tw("flex flex-row items-center justify-center mb-2")}>
           <FontAwesome5 onPress={router().back} name="chevron-left" size={24} color="black" />
           <Text style={tw("text-customBlack flex-1 text-base font-InterBold text-center")}>Sign Up</Text>

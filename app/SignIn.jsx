@@ -1,4 +1,4 @@
-import { View, Text, TextInput, SafeAreaView, Pressable, ScrollView } from "react-native";
+import { View, Text, Platform, SafeAreaView, ScrollView } from "react-native";
 import { useTailwind } from "tailwind-rn";
 import PrimaryButton from "../components/PrimaryButton";
 import { FontAwesome5 } from "@expo/vector-icons";
@@ -10,7 +10,10 @@ export default function SignIn() {
   const router = useRouter;
   return (
     <SafeAreaView style={tw("flex-1")}>
-      <ScrollView style={tw("flex-1 mx-6 mt-12")} showsVerticalScrollIndicator={false}>
+      <ScrollView
+        style={tw(`flex-1 mx-6 ${Platform.OS === "ios" ? "" : "mt-12"}`)}
+        showsVerticalScrollIndicator={false}
+      >
         <View style={tw("flex flex-row items-center justify-center mb-2")}>
           <FontAwesome5 onPress={router().back} name="chevron-left" size={24} color="black" />
           <Text style={tw("text-customBlack flex-1 text-base font-InterBold text-center")}>Sign In</Text>
@@ -25,7 +28,7 @@ export default function SignIn() {
         <View style={tw("flex items-center")}>
           <PrimaryInput label="CNIC" placeholder="00000-0000000-0" />
           <PrimaryInput label="Password" placeholder="Type your password" secureTextEntry />
-          <PrimaryButton buttonText="Sign In" href="/Dashboard" />
+          <PrimaryButton buttonText="Sign In" href="/dashboard" />
           <Text style={tw("text-customBlack font-InterBold mt-2")}>Forgot Password?</Text>
         </View>
       </ScrollView>
