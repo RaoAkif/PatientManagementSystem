@@ -9,7 +9,7 @@ export default function SignIn() {
   const tw = useTailwind();
   const router = useRouter();
   return (
-    <SafeAreaView style={tw("flex-1")}>
+    <SafeAreaView style={tw("flex-1 bg-white")}>
       <ScrollView
         style={tw(`flex-1 mx-6 ${Platform.OS === "ios" ? "" : "mt-12"}`)}
         showsVerticalScrollIndicator={false}

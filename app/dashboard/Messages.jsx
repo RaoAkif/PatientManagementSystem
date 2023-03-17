@@ -1,32 +1,176 @@
-import React from "react";
-import { View, Text, Image } from "react-native";
+import React, { useState } from "react";
+import { View, Text, Image, Pressable, ScrollView } from "react-native";
 import { useTailwind } from "tailwind-rn";
 import BottomTabHeader from "../../components/BottomTabHeader";
 import MessageCard from "../../components/MessageCard";
 
 export default function Messages() {
   const tw = useTailwind();
-  return (
-    <View style={tw(" flex-1 bg-white p-5 pt-10")}>
-      <BottomTabHeader title="Messages" />
+  const [selected, setSelected] = useState("unread");
 
-      <View style={tw("mt-10")}>
-        <View style={tw("flex flex-row")}>
-          <View
-            style={tw("w-3/6 py-3 my-2 rounded-3xl bg-white border-2 border-gray-100 ml-5 -mr-5 z-10")}
+  const tabClicked = (tabName) => {
+    setSelected(tabName);
+  };
+  return (
+    <View style={tw(" flex-1 bg-white pt-10")}>
+      <View style={tw("px-5")}>
+        <BottomTabHeader title="Messages" />
+      </View>
+
+      <View style={tw("flex-1 mt-5")}>
+        <View style={tw("px-5 flex-row")}>
+          <Pressable
+            onPress={() => tabClicked("unread")}
             accessibilityLabel="Learn more"
+            style={tw(
+              `flex-1 py-3 my-2 rounded-3xl  -mr-5  ${
+                selected === "unread" ? "border-2  bg-white  border-gray-100 z-10" : " bg-gray-100"
+              }`
+            )}
           >
-            <Text style={tw("text-gray-800 font-bold text-center font-Inter text-base")}>Unread(4)</Text>
-          </View>
-          <View style={tw("w-3/6 py-3 my-2 rounded-3xl bg-gray-100 -ml-5")} accessibilityLabel="Learn more">
-            <Text style={tw("text-gray-500 font-bold text-center font-Inter text-base")}>Read</Text>
-          </View>
+            <Text
+              style={tw(
+                ` text-center font-InterBold text-base ${selected === "unread" ? "text-customBlack" : "text-gray-500"}`
+              )}
+            >
+              Unread(4)
+            </Text>
+          </Pressable>
+
+          <Pressable
+            onPress={() => tabClicked("read")}
+            accessibilityLabel="Learn more"
+            style={tw(
+              `flex-1 py-3 my-2 rounded-3xl -ml-5 ${
+                selected === "read" ? " border-2  border-gray-100 bg-white z-10" : " bg-gray-100"
+              }`
+            )}
+          >
+            <Text
+              style={tw(
+                `font-InterBold text-center text-base ${selected === "read" ? "text-customBlack" : "text-gray-500"}`
+              )}
+            >
+              Read
+            </Text>
+          </Pressable>
         </View>
-        <View>
-          <MessageCard />
-          <MessageCard />
-          <MessageCard />
-          <MessageCard />
+        <View style={tw("flex-1 mt-2")}>
+          {selected === "unread" ? (
+            <ScrollView showsVerticalScrollIndicator={false}>
+              <MessageCard
+                name="John Doe"
+                message="Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+                date=""
+                avatarImg={require("../../assets/images/profile.png")}
+              />
+              <MessageCard
+                name="Simon Says"
+                message="Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+                date=""
+                avatarImg={require("../../assets/images/profile.png")}
+              />
+              <MessageCard
+                name="John Wick"
+                message="Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+                date=""
+                avatarImg={require("../../assets/images/profile.png")}
+              />
+              <MessageCard
+                name="Labrador"
+                message="Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+                date=""
+                avatarImg={require("../../assets/images/profile.png")}
+              />
+              <MessageCard
+                name="Labrador"
+                message="Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+                date=""
+                avatarImg={require("../../assets/images/profile.png")}
+              />
+              <MessageCard
+                name="Labrador"
+                message="Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+                date=""
+                avatarImg={require("../../assets/images/profile.png")}
+              />
+              <MessageCard
+                name="Labrador"
+                message="Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+                date=""
+                avatarImg={require("../../assets/images/profile.png")}
+              />
+              <MessageCard
+                name="Labrador"
+                message="Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+                date=""
+                avatarImg={require("../../assets/images/profile.png")}
+              />
+              <MessageCard
+                name="Labrador"
+                message="Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+                date=""
+                avatarImg={require("../../assets/images/profile.png")}
+              />
+            </ScrollView>
+          ) : (
+            <ScrollView showsVerticalScrollIndicator={false}>
+              <MessageCard
+                name="READ READ"
+                message="Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+                date=""
+                avatarImg={require("../../assets/images/profile.png")}
+              />
+              <MessageCard
+                name="READ READ"
+                message="Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+                date=""
+                avatarImg={require("../../assets/images/profile.png")}
+              />
+              <MessageCard
+                name="READ READ"
+                message="Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+                date=""
+                avatarImg={require("../../assets/images/profile.png")}
+              />
+              <MessageCard
+                name="READ READ"
+                message="Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+                date=""
+                avatarImg={require("../../assets/images/profile.png")}
+              />
+              <MessageCard
+                name="READ READ"
+                message="Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+                date=""
+                avatarImg={require("../../assets/images/profile.png")}
+              />
+              <MessageCard
+                name="READ READ"
+                message="Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+                date=""
+                avatarImg={require("../../assets/images/profile.png")}
+              />
+              <MessageCard
+                name="READ READ"
+                message="Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+                date=""
+                avatarImg={require("../../assets/images/profile.png")}
+              />
+              <MessageCard
+                name="READ READ"
+                message="Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+                date=""
+                avatarImg={require("../../assets/images/profile.png")}
+              />
+              <MessageCard
+                name="READ READ"
+                message="Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+                date=""
+                avatarImg={require("../../assets/images/profile.png")}
+              />
+            </ScrollView>
+          )}
         </View>
       </View>
     </View>

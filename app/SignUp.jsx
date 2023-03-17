@@ -10,7 +10,7 @@ export default function SignUp() {
   const router = useRouter();
 
   return (
-    <SafeAreaView style={tw("flex-1")}>
+    <SafeAreaView style={tw("flex-1 bg-white")}>
       <View style={tw(`flex-1 mx-6 ${Platform.OS === "ios" ? "" : "mt-12"}`)}>
         <View style={tw("flex flex-row items-center justify-center mb-2")}>
           <FontAwesome5 onPress={router.back} name="chevron-left" size={24} color="black" />
