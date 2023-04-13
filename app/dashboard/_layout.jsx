@@ -1,7 +1,6 @@
 import { Slot, Tabs } from "expo-router";
 import { Feather } from "@expo/vector-icons";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
-import Dashboard from "./index";
 
 export default function DashboardLayout() {
   return (

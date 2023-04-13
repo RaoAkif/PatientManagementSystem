@@ -1,7 +1,5 @@
 import React from "react";
-import { TailwindProvider } from "tailwind-rn";
-import utilities from "../tailwind.json";
-import { Slot, Stack } from "expo-router";
+import { Stack } from "expo-router";
 import { useFonts } from "expo-font";
 import { StatusBar } from "expo-status-bar";
 
@@ -17,16 +15,13 @@ export default function Layout() {
   }
   return (
     <>
-      <TailwindProvider utilities={utilities}>
-        <Stack screenOptions={{ headerShown: false }}>
-          <Stack.Screen name="index" />
-          <Stack.Screen name="SignIn" />
-          <Stack.Screen name="SignUp" />
-          <Stack.Screen name="MyProfile" />
+      <Stack screenOptions={{ headerShown: false }}>
+        <Stack.Screen name="index" />
+        <Stack.Screen name="SignIn" />
+        <Stack.Screen name="SignUp" />
+        <Stack.Screen name="MyProfile" />
+      </Stack>
 
-          {/* <Slot /> */}
-        </Stack>
-      </TailwindProvider>
       <StatusBar />
     </>
   );

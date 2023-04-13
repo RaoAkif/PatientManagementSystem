@@ -1,16 +1,15 @@
 import React from "react";
 import { View } from "react-native";
 import SettingsOptions from "../../components/SettingsOptions";
-import { useTailwind } from "tailwind-rn";
+import tw from "../../utils/tailwind";
 import BottomTabHeader from "../../components/BottomTabHeader";
 
 export default function Settings() {
-  const tw = useTailwind();
   return (
-    <View style={tw(" flex-1 bg-white p-5 pt-10")}>
+    <View style={tw.style(" flex-1 bg-white p-5 pt-10")}>
       <BottomTabHeader title="Settings" />
 
-      <View style={tw("mt-16")}>
+      <View style={tw.style("mt-16")}>
         <SettingsOptions name="Profile" icon="user" />
         <SettingsOptions name="Payment Account" icon="credit-card" />
         <SettingsOptions name="Notification" icon="bell" />

@@ -1,35 +1,34 @@
 import React, { useState } from "react";
 import { View, Text, Image, Pressable, ScrollView } from "react-native";
-import { useTailwind } from "tailwind-rn";
+import tw from "../../utils/tailwind";
 import BottomTabHeader from "../../components/BottomTabHeader";
 import MessageCard from "../../components/MessageCard";
 
 export default function Messages() {
-  const tw = useTailwind();
   const [selected, setSelected] = useState("unread");
 
   const tabClicked = (tabName) => {
     setSelected(tabName);
   };
   return (
-    <View style={tw(" flex-1 bg-white pt-10")}>
-      <View style={tw("px-5")}>
+    <View style={tw.style(" flex-1 bg-white pt-10")}>
+      <View style={tw.style("px-5")}>
         <BottomTabHeader title="Messages" />
       </View>
 
-      <View style={tw("flex-1 mt-5")}>
-        <View style={tw("px-5 flex-row")}>
+      <View style={tw.style("flex-1 mt-5")}>
+        <View style={tw.style("px-5 flex-row")}>
           <Pressable
             onPress={() => tabClicked("unread")}
             accessibilityLabel="Learn more"
-            style={tw(
+            style={tw.style(
               `flex-1 py-3 my-2 rounded-3xl  -mr-5  ${
                 selected === "unread" ? "border-2  bg-white  border-gray-100 z-10" : " bg-gray-100"
               }`
             )}
           >
             <Text
-              style={tw(
+              style={tw.style(
                 ` text-center font-InterBold text-base ${selected === "unread" ? "text-customBlack" : "text-gray-500"}`
               )}
             >
@@ -40,14 +39,14 @@ export default function Messages() {
           <Pressable
             onPress={() => tabClicked("read")}
             accessibilityLabel="Learn more"
-            style={tw(
+            style={tw.style(
               `flex-1 py-3 my-2 rounded-3xl -ml-5 ${
                 selected === "read" ? " border-2  border-gray-100 bg-white z-10" : " bg-gray-100"
               }`
             )}
           >
             <Text
-              style={tw(
+              style={tw.style(
                 `font-InterBold text-center text-base ${selected === "read" ? "text-customBlack" : "text-gray-500"}`
               )}
             >
@@ -55,7 +54,7 @@ export default function Messages() {
             </Text>
           </Pressable>
         </View>
-        <View style={tw("flex-1 mt-2")}>
+        <View style={tw.style("flex-1 mt-2")}>
           {selected === "unread" ? (
             <ScrollView showsVerticalScrollIndicator={false}>
               <MessageCard
