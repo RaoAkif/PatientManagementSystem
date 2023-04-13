@@ -1,38 +1,41 @@
 import React from "react";
 import { View, Text, Image } from "react-native";
-import tw from "../utils/tailwind";
+import tw from "../../utils/tailwind";
 
 export default function MyProfile() {
   return (
     <View style={tw.style("my-10 mx-5")}>
       <View>
-        <Image style={tw.style("w-7 h-7 absolute top-2 -ml-2")} source={require("../assets/images/chevron_left.png")} />
+        <Image
+          style={tw.style("w-7 h-7 absolute top-2 -ml-2")}
+          source={require("../../assets/images/chevron_left.png")}
+        />
         <Text style={tw.style("text-3xl font-bold text-gray-800 ml-5 text-center")}>My Profile</Text>
       </View>
       <View style={tw.style("flex flex-col items-center justify-between mt-16")}>
-        <Image style={tw.style("w-20 h-20")} source={require("../assets/images/profile.png")} />
+        <Image style={tw.style("w-20 h-20")} source={require("../../assets/images/profile.png")} />
         <View style={tw.style("flex flex-row items-center pt-5")}>
           <Text style={tw.style("text-2xl font-bold text-gray-800 ml-5 mr-5")}>Emily Robertson</Text>
-          <Image style={tw.style("w-7 h-7")} source={require("../assets/images/edit.png")} />
+          <Image style={tw.style("w-7 h-7")} source={require("../../assets/images/edit.png")} />
         </View>
         <View style={tw.style("flex flex-row items-center pt-5")}>
-          <Image style={tw.style("w-7 h-7")} source={require("../assets/images/map.png")} />
+          <Image style={tw.style("w-7 h-7")} source={require("../../assets/images/map.png")} />
           <Text style={tw.style("text-xl font-bold text-gray-800 ml-5")}>Florida, US</Text>
         </View>
       </View>
       <View style={tw.style("flex flex-row justify-between items-baseline mt-5")}>
         <View style={tw.style("flex flex-col items-center justify-center pt-8")}>
-          <Image style={tw.style("w-10 h-10")} source={require("../assets/images/calender.png")} />
+          <Image style={tw.style("w-10 h-10")} source={require("../../assets/images/calender.png")} />
           <Text style={tw.style("text-xl font-bold text-gray-800 mt-2")}>$2,346</Text>
           <Text style={tw.style("text font-bold text-gray-400 mt-2")}>Appointments</Text>
         </View>
         <View style={tw.style("flex flex-col items-center justify-center pt-5")}>
-          <Image style={tw.style("w-10 h-10")} source={require("../assets/images/clock.png")} />
+          <Image style={tw.style("w-10 h-10")} source={require("../../assets/images/clock.png")} />
           <Text style={tw.style("text-xl font-bold text-gray-800 mt-2")}>14,560</Text>
           <Text style={tw.style("text font-bold text-gray-400 mt-2")}>Hours</Text>
         </View>
         <View style={tw.style("flex flex-col items-center justify-center pt-5")}>
-          <Image style={tw.style("w-10 h-10")} source={require("../assets/images/credit-card.png")} />
+          <Image style={tw.style("w-10 h-10")} source={require("../../assets/images/credit-card.png")} />
           <Text style={tw.style("text-xl font-bold text-gray-800 mt-2")}>$2,346</Text>
           <Text style={tw.style("text font-bold text-gray-400 mt-2")}>Spending</Text>
         </View>

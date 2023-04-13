@@ -5,6 +5,12 @@
       "bundler": "metro"
     },
     "name": "PatientManagementSystem",
-    "slug": "PatientManagementSystem"
+    "slug": "pms",
+    "extra": {
+      "eas": {
+        "projectId": "e355d50d-6223-4f23-8261-cd2c9f2ef435"
+      }
+    },
+    "owner": "heat90"
   }
 }

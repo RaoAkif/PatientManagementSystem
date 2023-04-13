@@ -40,6 +40,13 @@ export default function DashboardLayout() {
           tabBarIcon: () => <Feather name="settings" size={28} color="#0D3F67" />,
         }}
       />
+
+      <Tabs.Screen
+        name="MyProfile"
+        options={{
+          href: null,
+        }}
+      />
     </Tabs>
   );
 }
