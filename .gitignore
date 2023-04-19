@@ -13,3 +13,4 @@ tailwind.css
 tailwind.json
 # macOS
 .DS_Store
+ngrok.exe

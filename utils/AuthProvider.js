@@ -15,7 +15,7 @@ export default function AuthProvider() {
     } else if (!isLoggedIn && inHomeGroup) {
       router.replace("/");
     }
-    console.log(isLoggedIn);
+    // console.log(isLoggedIn);
   }, [isLoggedIn, segments]);
 
   return <Slot />;

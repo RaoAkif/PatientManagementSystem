@@ -19,7 +19,6 @@ export default function Dashboard() {
   }
 
   if (user) {
-    console.log(user.data);
     return (
       <View style={tw.style("flex flex-1 flex-col justify-between p-5 pt-10 bg-white")}>
         <View style={tw.style("flex flex-row justify-between")}>
