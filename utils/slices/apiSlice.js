@@ -21,6 +21,19 @@ export const apiSlice = createApi({
         body: cred,
       }),
     }),
+    register: builder.mutation({
+      query: (formData) => ({
+        url: `/users`,
+        method: "POST",
+        body: {
+          first_name: formData.firstName,
+          last_name: formData.lastName,
+          cnic: formData.cnic,
+          email: formData.email,
+          password: formData.password,
+        },
+      }),
+    }),
     getCurrentUser: builder.query({
       query: () => ({ url: `users/me` }),
       providesTags: (result, error) => [{ type: "getCurrentUser" }],
@@ -28,4 +41,4 @@ export const apiSlice = createApi({
   }),
 });
 
-export const { useLoginMutation, useGetCurrentUserQuery } = apiSlice;
+export const { useLoginMutation, useGetCurrentUserQuery, useRegisterMutation } = apiSlice;

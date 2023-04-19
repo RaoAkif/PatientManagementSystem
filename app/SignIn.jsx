@@ -90,7 +90,7 @@ export default function SignIn() {
               name="password"
             />
 
-            <PrimaryButton buttonText="Sign In" href="/dashboard" onPress={handleSubmit(onSubmit)} />
+            <PrimaryButton buttonText="Sign In" onPress={handleSubmit(onSubmit)} />
             <Text style={tw.style("text-customBlack font-InterBold mt-2")}>Forgot Password?</Text>
           </View>
         </ScrollView>
