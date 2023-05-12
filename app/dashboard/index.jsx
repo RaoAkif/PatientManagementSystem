@@ -6,6 +6,7 @@ import { MaterialIcons } from "@expo/vector-icons";
 import home_image from "../../assets/images/home_image.png";
 import profile from "../../assets/images/profile.png";
 import PrimaryInput from "../../components/PrimaryInput";
+import { Avatar } from "react-native-paper";
 
 export default function Dashboard() {
   const { data: user, isLoading, error } = useGetCurrentUserQuery();
@@ -28,7 +29,8 @@ export default function Dashboard() {
         <View style={tw.style("flex flex-row items-center ")}>
           <MaterialIcons name="menu" size={28} color="black" />
           <Text style={tw.style("text-xl flex-1 px-4 font-bold text-gray-800")}>Hi, {user.data.first_name}</Text>
-          <Image style={tw.style("w-7 h-7")} source={profile}></Image>
+          {/* <Image style={tw.style("w-7 h-7")} source={profile}></Image> */}
+          <Avatar.Text size={28} label={user.data.first_name.slice(0, 2).toUpperCase()} />
         </View>
         <Image style={tw.style("mt-4 w-62 ")} source={home_image} resizeMode="contain" />
 

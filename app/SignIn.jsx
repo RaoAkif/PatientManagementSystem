@@ -9,6 +9,7 @@ import { useLoginMutation } from "../utils/slices/apiSlice";
 import { useDispatch } from "react-redux";
 import { login } from "../utils/slices/authSlice";
 import { useEffect } from "react";
+import { TextInput } from "react-native-paper";
 
 export default function SignIn() {
   const router = useRouter();
@@ -64,11 +65,20 @@ export default function SignIn() {
               control={control}
               rules={{ required: true }}
               render={({ field: { onChange, onBlur, value } }) => (
-                <PrimaryInput
+                // <PrimaryInput
+                //   label="Email"
+                //   placeholder="enter your email"
+                //   onBlur={onBlur}
+                //   onChange={onChange}
+                //   value={value}
+                // />
+                <TextInput
+                  style={tw.style("w-full bg-gray-100")}
+                  mode="outlined"
                   label="Email"
                   placeholder="enter your email"
                   onBlur={onBlur}
-                  onChange={onChange}
+                  onChangeText={onChange}
                   value={value}
                 />
               )}
@@ -78,14 +88,24 @@ export default function SignIn() {
               control={control}
               rules={{ required: true }}
               render={({ field: { onChange, onBlur, value } }) => (
-                <PrimaryInput
+                <TextInput
+                  style={tw.style("w-full bg-gray-100")}
+                  mode="outlined"
                   label="Password"
                   placeholder="enter your password"
                   secureTextEntry
                   onBlur={onBlur}
-                  onChange={onChange}
+                  onChangeText={onChange}
                   value={value}
                 />
+                // <PrimaryInput
+                //   label="Password"
+                //   placeholder="enter your password"
+                //   secureTextEntry
+                //   onBlur={onBlur}
+                //   onChange={onChange}
+                //   value={value}
+                // />
               )}
               name="password"
             />

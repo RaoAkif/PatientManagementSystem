@@ -4,6 +4,7 @@ import tw from "../../../utils/tailwind";
 import BottomTabHeader from "../../../components/BottomTabHeader";
 import { useRouter } from "expo-router";
 import { Entypo } from "@expo/vector-icons";
+import { FAB } from "react-native-paper";
 
 export default function reports() {
   const router = useRouter();
@@ -13,11 +14,13 @@ export default function reports() {
       <View style={tw.style("px-5")}>
         <BottomTabHeader title="Reports" />
       </View>
-      <Pressable onPress={() => router.push("./reports/newReport")} style={tw.style("absolute z-10 bottom-6 right-6")}>
-        <View style={tw.style("bg-customPurple p-2 rounded-xl")}>
-          <Entypo name="plus" size={28} color="white" />
-        </View>
-      </Pressable>
+      <FAB
+        icon="plus"
+        customSize={46}
+        color="white"
+        onPress={() => router.push("./reports/newReport")}
+        style={tw.style("absolute z-10 bottom-6 right-6 bg-customPurple rounded-xl")}
+      />
 
       <View style={tw.style("flex-1 mt-8")}>
         <ScrollView showsVerticalScrollIndicator={false}>
