@@ -3,7 +3,8 @@ import { Stack } from "expo-router";
 import { useFonts } from "expo-font";
 import { StatusBar } from "expo-status-bar";
 import { store } from "../utils/store";
-import { Provider } from "react-redux";
+import { Provider as PaperProvider } from "react-native-paper";
+import { Provider as StoreProvider } from "react-redux";
 import AuthProvider from "../utils/AuthProvider";
 
 export default function Layout() {
@@ -18,16 +19,18 @@ export default function Layout() {
   }
   return (
     <>
-      <Provider store={store}>
-        <AuthProvider>
-          <Stack screenOptions={{ headerShown: false }}>
-            <Stack.Screen name="index" />
-            <Stack.Screen name="SignIn" />
-            <Stack.Screen name="SignUp" />
-            <Stack.Screen name="MyProfile" />
-          </Stack>
-        </AuthProvider>
-      </Provider>
+      <StoreProvider store={store}>
+        <PaperProvider>
+          <AuthProvider>
+            <Stack screenOptions={{ headerShown: false }}>
+              <Stack.Screen name="index" />
+              <Stack.Screen name="SignIn" />
+              <Stack.Screen name="SignUp" />
+              {/* <Stack.Screen name="MyProfile" /> */}
+            </Stack>
+          </AuthProvider>
+        </PaperProvider>
+      </StoreProvider>
       <StatusBar />
     </>
   );

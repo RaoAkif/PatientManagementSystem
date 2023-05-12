@@ -18,6 +18,13 @@ export default function DashboardLayout() {
         }}
       />
       <Tabs.Screen
+        name="reports"
+        options={{
+          tabBarShowLabel: false,
+          tabBarIcon: () => <Feather name="file-text" size={28} color="#0D3F67" />,
+        }}
+      />
+      <Tabs.Screen
         name="Appointments"
         options={{
           tabBarShowLabel: false,
